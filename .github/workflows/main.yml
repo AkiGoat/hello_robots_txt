@@ -65,9 +65,10 @@ jobs:
       - name: 🔄 Sync with Server
         uses: wangyucode/sftp-upload-action@v1.3.3
         with:
-          host: ${{ secrets.host }}
-          username: ${{ secrets.username }}
-          password:  ${{ secrets.password }}
+          host: ${{ secrets.HOST }}
+          port: ${{ secrets.PORT }}
+          username: ${{ secrets.USERNAME }}
+          password:  ${{ secrets.PASWORD }}
           localDir: 'public'
-          remoteDir: ${{ secrets.remoteDir }}
+          remoteDir: ${{ secrets.REMOTE_DIR }}
           
