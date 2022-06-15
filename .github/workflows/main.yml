@@ -63,7 +63,7 @@ jobs:
       #    FOLDER: public
 
       - name: 🔄 Sync with Server
-        uses: wangyucode/sftp-upload-action@v1.3.3
+        uses: wangyucode/sftp-upload-action@v1.3.2
         with:
           host: ${{ secrets.HOST }}
           port: ${{ secrets.PORT }}
