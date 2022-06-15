@@ -68,7 +68,7 @@ jobs:
           host: ${{ secrets.HOST }}
           port: ${{ secrets.PORT }}
           username: ${{ secrets.USERNAME }}
-          password:  ${{ secrets.PASWORD }}
+          password:  ${{ secrets.PASSWORD }}
           localDir: 'public'
           remoteDir: ${{ secrets.REMOTE_DIR }}
           
