@@ -62,14 +62,12 @@ jobs:
       #    BRANCH: gh-pages
       #    FOLDER: public
 
-      - name: 🔄 Sync with S3
-        uses: jakejarvis/s3-sync-action@master
+      - name: 🔄 Sync with Server
+        uses: wangyucode/sftp-upload-action@v1.3.3
         with:
-          args: --acl private --follow-symlinks --delete
-        env:
-          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
-          AWS_S3_ENDPOINT: ${{ secrets.AWS_S3_ENDPOINT }}
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          DEST_DIR: ${{ secrets.AWS_DEST_DIR }}
-          SOURCE_DIR: public
+          host: ${{ secrets.host }}
+          username: ${{ secrets.username }}
+          password:  ${{ secrets.password }}
+          localDir: 'public'
+          remoteDir: ${{ secrets.remoteDir }}
+          
