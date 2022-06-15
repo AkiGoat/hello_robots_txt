@@ -1,4 +1,4 @@
-#以下说明来自小森林站，不适用于本站：#
+**以下说明来自小森林站，不适用于本站：**
 
 # 小森林静态资源
 ![badge](https://github.com/mashirozx/hello_robots_txt/actions/workflows/main.yml/badge.svg)
